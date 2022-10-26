@@ -10,4 +10,10 @@ RSpec.describe Author, type: :model do
 
     expect(@author.name).to eq('Alan Turing')
   end
+
+  it "should not accept empty lastnames" do
+    @author = Author.new({:first_name => 'Alan', :homepage => 'http://wikipedia.org/Alan_Turing'})
+
+    expect(@author).to_not be_valid
+  end
 end
