@@ -9,6 +9,6 @@ class Paper < ApplicationRecord
     end
 
     def authors
-        @authors
+        @authors.to_a
     end
 end

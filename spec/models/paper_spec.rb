@@ -16,7 +16,7 @@ RSpec.describe Paper, type: :model do
   end
 
   it "should have a list of authors" do
-    @paper = FactoryBot.create :paper
+    @paper = Paper.new({:title => "This is an interesting paper", :venue => "Published online", :year => "in the near future"})
 
     expect(@paper.authors).to be_kind_of Array
   end
