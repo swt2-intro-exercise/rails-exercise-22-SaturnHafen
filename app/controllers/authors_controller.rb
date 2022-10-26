@@ -40,7 +40,7 @@ class AuthorsController < ApplicationController
         @author.destroy
        
         redirect_to authors_path
-      end
+    end
 
     private
         def author_params
