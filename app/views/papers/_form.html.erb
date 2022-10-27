@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <%= form.select 'author_ids', options_from_collection_for_select(Author.all, :id, :name, paper.author_ids), {}, multiple: true, size: 10 %>
+
   <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
