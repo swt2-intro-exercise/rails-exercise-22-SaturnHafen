@@ -5,11 +5,5 @@ class Paper < ApplicationRecord
     validates :venue, presence: true
     validates :year, presence: true, numericality: { only_integer: true }
 
-    #def authors=(authors)
-    #    @authors = authors
-    #end
-
-    #def authors
-    #    @authors.to_a
-    #end
+    scope :created_year, ->(year) { where("year = ?", year) }
 end

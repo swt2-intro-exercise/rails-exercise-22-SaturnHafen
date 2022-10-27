@@ -6,12 +6,4 @@ class Author < ApplicationRecord
     def name
         first_name + " " + last_name
     end
-
-    #def papers=(papers)
-    #    @papers = papers
-    #end
-
-    #def papers
-    #    @papers.to_a
-    #end
 end

@@ -21,4 +21,12 @@ describe "index paper page", type: :feature do
 
     expect(@old_count).to equal Paper.count + 1
   end
+
+  it "should not show papers with non-matching years" do
+    @paper = FactoryBot.create :paper
+
+    visit papers_path({ :year => 1951 })
+
+    expect(page).to_not have_text("COMPUTING MACHINERY AND INTELLIGENCE")
+  end
 end
