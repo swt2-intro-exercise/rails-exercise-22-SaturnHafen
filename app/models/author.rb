@@ -11,7 +11,7 @@ class Author < ApplicationRecord
     #    @papers = papers
     #end
 
-    def papers
-        @papers.to_a
-    end
+    #def papers
+    #    @papers.to_a
+    #end
 end

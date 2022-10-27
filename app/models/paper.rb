@@ -9,7 +9,7 @@ class Paper < ApplicationRecord
     #    @authors = authors
     #end
 
-    def authors
-        @authors.to_a
-    end
+    #def authors
+    #    @authors.to_a
+    #end
 end
